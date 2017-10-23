@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "cavy": "^0.4.1",
+    "i": "^0.3.6",
     "jest-expo": "^21.0.2",
     "react-native-scripts": "1.5.0",
     "react-test-renderer": "16.0.0-alpha.12"
@@ -22,6 +23,7 @@
   "dependencies": {
     "expo": "^21.0.0",
     "react": "16.0.0-alpha.12",
-    "react-native": "^0.48.4"
+    "react-native": "^0.48.4",
+    "react-navigation": "^1.0.0-beta.15"
   }
 }
