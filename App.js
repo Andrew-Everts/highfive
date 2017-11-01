@@ -1,23 +1,66 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { AppRegistry, StyleSheet, Text, View, TextInput } from 'react-native';
+
 
 export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    );
-  }
+    constructor(props){
+        super(props);
+        this.state = {text: 'Write Answer to the Prompt',};
+    }
+    render() {
+        return (
+            <View style={styles.container}>
+                <View style = {styles.containerA}>
+                    <Text style = {styles.headline}>Prompt Goes Here</Text>
+                </View>
+                <View style = {styles.containerB}>
+                    <TextInput
+                        style = {styles.textInput}
+                        onChangeText = {(text) => this.setState({text})}
+                        value = {this.state.text}
+                    />
+                </View>
+            </View>
+
+
+        );
+    }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+        flex: 1,
+        backgroundColor: '#8fbc8f',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    containerA: {
+        flex: 1,
+        backgroundColor: '#8fbc8f',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    containerB: {
+        flex: 3,
+        backgroundColor: '#8fbc8f',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    textInput: {
+        height: 300,
+        width: 250,
+        borderColor: 'gray',
+        borderWidth: 1,
+        alignSelf: 'center',
+    },
+    headline: {
+        fontSize: 20,
+        textAlign: 'center',
+        backgroundColor: 'rgba(0,0,0,0)',
+        color: 'black',
+    }
+
+
 });
+
+AppRegistry.registerComponent('AwesomeProject', () => App);
